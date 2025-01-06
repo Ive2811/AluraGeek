@@ -1,0 +1,268 @@
+:root {
+    --color_fondo: #FFF;
+    --color_texto: #E5E5E5;
+    --color_menu: #5D04D9;
+    --color_secundario: #000;
+}
+
+body {
+    background-color: var(--color_fondo);
+    font-family: "Press Start 2P", serif;
+    margin: 0;
+    padding: 0;
+}
+
+.swal2-title, .swal2-content {
+    font-family: 'IBM Plex Mono', monospace; 
+}
+
+.header {
+    display: flex;
+    background-color: var(--color_menu);
+    font-weight: 400;
+    font-size: 24px;
+    color: var(--color_texto);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.main_section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    margin-top: 5%;
+    width: 90%;
+    margin-bottom: 10%;
+    gap: 3%;
+    padding: 0% 2%;
+}
+
+.products_section {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.products_section__contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: -2%;
+}
+
+.products_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    width: 80%;
+    height: calc(10px + 4 * 240px);
+    overflow-y: auto;
+    box-shadow: -4px 4px 8px rgb(108, 103, 103);
+    padding: 5%;
+}
+
+.product {
+    background-color: var(--color_menu);
+    padding: 10px;
+    text-align: center;
+    border: 3px solid var(--color_secundario);
+    border-radius: 10px;
+    margin-bottom: 20%;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover; 
+}
+
+.no-products-message {
+    font-family: "Press Start 2P", serif;
+    color: #705694;
+    font-size: 36px;
+    text-align: center;
+    font-weight: 100;
+    width: 100%;
+    padding: 90%;
+}
+
+.product_info {
+    font-family: "IBM Plex Mono", serif;
+    color: var(--color_texto);
+    font-size: 15px;
+    font-weight: 400;
+    text-align: start;
+}
+
+.product_info_price {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.product_info_price p {
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 0%;
+}
+
+.delete_button {
+    border: none;
+    background-color: var(--color_menu);
+    color: var(--color_fondo);
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.products_form {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.products_form__contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.products_form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 90%;
+}
+
+.products_form__campos input {
+    border-radius: 30px;
+    border: 3px solid var(--color_menu);
+    padding: 5%;
+    margin-bottom: 5%;
+    color: var(--color_menu);
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "IBM Plex Mono", serif;
+}
+
+.products_form__botones {
+    display: flex;
+    justify-content: space-between;
+}
+
+.products_form__botones button {
+    flex: 1;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    border-radius: 15px;
+    border: 3px solid var(--color_menu);
+    background-color: var(--color_menu);
+    color: var(--color_fondo);
+    padding: 3%;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 8px;
+    text-align: center;
+}
+
+.products_form__botones button:last-child {
+    background-color: #FFF;
+    color: var(--color_menu);
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color_menu);
+    font-weight: 400;
+    font-size: 24px;
+    color: var(--color_fondo);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.footer__contenedor {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+.footer h2 {
+    font-family: "Press Start 2P", serif;
+}
+
+.footer p {
+    font-family: "IBM Plex Mono", serif;
+    font-size: 16px;
+    margin: 5px;
+}
+
+.footer p:last-of-type {
+    font-weight: 200;
+}
+
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+
+    .main_section {
+        flex-direction: column;
+    }
+    
+    .products_section, .products_form {
+        width: 100%;
+    }
+    
+    .products_grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .product {
+        background-color: var(--color_menu);
+        padding: 10px;
+        text-align: center;
+        border: 3px solid var(--color_secundario);
+        border-radius: 10px;
+        margin-bottom: 20%;
+        max-width: 300px; 
+        max-height: 250px;
+    }
+    .products_form { 
+        order: -1;
+        margin-bottom: 10%;
+    }
+
+    .products_form__botones button {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-items: center; 
+    }
+
+    .header img {
+        width: auto; 
+    }
+
+    .header h1 {
+        font-size: 20px;
+    }
+    
+    .header{
+        flex-direction: row;
+        align-items: center;
+        padding: 5% 0;
+    }
+    
+    .footer__contenedor {
+        flex-direction: row;
+        font-size: 20px;
+    }
+}
