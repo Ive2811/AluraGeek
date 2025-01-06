@@ -17,13 +17,13 @@ AluraGeek es una aplicación web que permite a los usuarios administrar producto
 - **SweetAlert2**
 
 ## Estructura del proyecto
-- **index.html:**: Archivo principal de HTML.
-- **styles.css**: Archivo de estilos CSS.
-- **script.js**: Archivo principal de JavaScript para la lógica de la aplicación.
-- **db.json**: Archivo JSON que simula la base de datos de productos.
-- **api.js:**: Archivo JavaScript para las requisiciones al servidor.
-- **listProducts.js:**: Archivo JavaScript para listar los productos.
-- **createProducts.j:**: Archivo JavaScript para crear nuevos productos.
+- **index.html:** Archivo principal de HTML.
+- **styles.css:** Archivo de estilos CSS.
+- **script.js:** Archivo principal de JavaScript para la lógica de la aplicación.
+- **db.json:** Archivo JSON que simula la base de datos de productos.
+- **api.js:** Archivo JavaScript para las requisiciones al servidor.
+- **listProducts.js:** Archivo JavaScript para listar los productos.
+- **createProducts.js:** Archivo JavaScript para crear nuevos productos.
 
 ## Instalación
 Sigue estos pasos para instalar y ejecutar el proyecto:
@@ -35,7 +35,6 @@ Sigue estos pasos para instalar y ejecutar el proyecto:
 2. **Instala JSON Server**:
    ```bash
    npm install -g json-server
-
 
 3. **Navega al directorio del proyecto:**:
    ```bash
